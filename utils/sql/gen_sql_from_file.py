@@ -1,6 +1,21 @@
 """ generate create table and insert sql statements from input files.
 Input files can be csv or text (tab or space delimited)
 
+ex:  in this case the table will be named: 'demand'
+     python3 gen_sql_from_file.py -i demand.txt
+
+ex: in this case the table will be named: 'refund'
+    python3  gen_sql_from_file.py -i demand.txt -t refund
+
+usage: python3 gen_sql_from_file.py [-h] -i INPUT_FILE [-t TABLE_NAME]
+
+arguments:
+  -h, --help            show this help message and exit
+  -i INPUT_FILE, --input_file INPUT_FILE
+                        input file name
+  -t TABLE_NAME, --table_name TABLE_NAME
+                        Optional: table name, else will use the filenanme as the table name
+
 exampe:
     python3 gen_sql_from_file.py -i refund.txt -t demand2
 
