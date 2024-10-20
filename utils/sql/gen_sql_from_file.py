@@ -16,7 +16,7 @@ arguments:
   -t TABLE_NAME, --table_name TABLE_NAME
                         Optional: table name, else will use the filenanme as the table name
 
-exampe:
+example:
     python3 gen_sql_from_file.py -i refund.txt -t demand2
 
 """
@@ -112,7 +112,8 @@ def gen_sql(input_file, table_name=None):
             #print(f"-- line: {line}")
 
         INSERT_STMT = INSERT_STMT[:-1]  ### get rid of the last comma
-        INSERT_STMT += ";\n"
+        INSERT_STMT += ";\n"            ###  and replace with closing semicolon
+
         print(INSERT_STMT)
 
         print(f"select * from {table_name} limit 5;\n")
