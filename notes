@@ -1,0 +1,16 @@
+
+=== quick start ===
+
+ghubpy   ### cd ~/git/pub_github/ds-python
+
+-- do this once
+-- python3 -m venv .venv
+
+source .venv/bin/activate
+which pip python3
+pip install -r requirements.txt
+
+python3
+import pandas as pd
+import numpy as np
+
